@@ -1,0 +1,35 @@
+Generate a commercial Instagram product post (4:5 aspect ratio) merging the uploaded product and the MAVIK logo under these strict JSON rules:
+
+{
+  "image_parameters": {
+    "subject_preservation": {
+      "use_exact_uploaded_product": true,
+      "visual_modifications_allowed": false,
+      "note": "Keep the uploaded product 100% identical in shape, color, and texture. Place it into the scene without redrawing."
+    },
+    "environment": {
+      "surface": "sleek minimalist matte white podium with subtle micro-cement texture",
+      "background": "bright high-key modern studio, pure off-white background with soft geometric daylight shadows, Nordic minimalist aesthetic",
+      "camera_style": "85mm commercial studio shot, soft natural contact shadows, 8k"
+    },
+    "branding_and_typography_layer": {
+      "strict_2d_rule": "Treat both logo and text strictly as flat 2D graphic overlays. Do NOT emboss onto the product.",
+      "overlay_specification_json": {
+        "brand_watermark": {
+          "source": "uploaded black MAVIK logo",
+          "style": "flat 2D solid black logo",
+          "opacity": 0.90,
+          "placement": { "position": "top-left", "coordinates": { "x": 0.08, "y": 0.08 }, "scale": "12% width" }
+        },
+        "product_title_overlay": {
+          "exact_text": "[بخور و رطوبت ساز طرح ابر بارانی]",
+          "typography_style": "Sharp angular Nordic-inspired Persian typography, chiseled deep charcoal black (#1A1A1A) with subtle 3D bevel and soft shadow",
+          "opacity": 0.95,
+          "placement": { "position": "bottom-center", "coordinates": { "x": 0.50, "y": 0.88 }, "scale": "max 70% width, 5% height" }
+        }
+      }
+    }
+  }
+}
+
+Rendering outcome: Place the unaltered product on the white studio podium. Overlay the 2D black logo at top-left and render the exact Persian text defined in `product_title_overlay.exact_text` at bottom-center. Aspect ratio 4:5.
