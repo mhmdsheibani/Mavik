@@ -1,0 +1,37 @@
+Generate a commercial Instagram Reels cover (9:16 vertical aspect ratio) merging the uploaded product and the MAVIK logo under these strict JSON rules:
+
+{
+  "image_parameters": {
+    "aspect_ratio": "9:16",
+    "subject_preservation": {
+      "use_exact_uploaded_product": true,
+      "visual_modifications_allowed": false,
+      "note": "Keep the uploaded product 100% identical in shape, color, and texture. Place it in the foreground without redrawing or altering it."
+    },
+    "environment": {
+      "surface": "sleek, minimalist matte black architectural studio podium",
+      "background": "clean, minimalist dark charcoal photography studio with a seamless matte dark grey backdrop and soft studio rim lighting",
+      "branded_3d_prop": "Place exactly ONE physical 3D-printed decorative sculpture shaped like the uploaded MAVIK emblem (a rounded triangle base with two curved Viking horns on the sides) resting softly out-of-focus in the background to the side, printed in matte black PLA filament with subtle layer lines",
+      "camera_style": "85mm minimalist studio product photography, shallow depth of field, sharp focus on the main product, soft cinematic blur on the single background MAVIK sculpture, 8k"
+    },
+    "branding_and_typography_layer": {
+      "strict_2d_rule": "Treat the corner watermark and bottom text strictly as flat 2D graphic overlays. Do NOT emboss them onto the main product.",
+      "overlay_specification_json": {
+        "brand_watermark": {
+          "source": "uploaded white MAVIK logo",
+          "style": "flat 2D white logo",
+          "opacity": 0.90,
+          "placement": { "position": "top-left (Reels safe zone)", "coordinates": { "x": 0.12, "y": 0.16 }, "scale": "14% width" }
+        },
+        "product_title_overlay": {
+          "exact_text": "[دستگاه بخور طرح ابر بارانی]",
+          "typography_style": "Persian calligraphy inspired by angular Viking runes, clean chiseled bone-white (#F2EFE9) look with subtle dark drop-shadow",
+          "opacity": 0.95,
+          "placement": { "position": "bottom-center (Reels grid safe zone)", "coordinates": { "x": 0.50, "y": 0.80 }, "scale": "max 75% width, 4.5% height" }
+        }
+      }
+    }
+  }
+}
+
+Rendering outcome: Place the unaltered uploaded product on a clean matte black minimalist studio podium in a 9:16 vertical frame, with a single softly blurred 3D-printed MAVIK horned-triangle decorative sculpture in the background. Overlay the 2D white logo at top-left and render the exact Persian text defined in `product_title_overlay.exact_text` at bottom-center.
